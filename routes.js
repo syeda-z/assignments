@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static(__dirname,'..'));
+app.use(express.static(path.join(__dirname,'..')));
 
 //serves each HTML file separately.
 app.get('/pricing',(req,res)=>{
