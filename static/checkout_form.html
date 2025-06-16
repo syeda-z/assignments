@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--FORM-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   </head>
   <body>
     <div class="container">
@@ -19,15 +19,15 @@
         <div class="row mt-5">
             <div class="col-md-8">
                 <h3> Billing address </h3>
-                <form action="">
+                <form method="POST" action="/submit-form">
                     <div class="row">
                         <div class="col-md-6"><!--firstname-->
                             <label for="firstnameFormControlInput1" class="form-label">First Name</label>
-                            <input type="firstname" class="form-control" id="firstnameFormControlInput1">
+                            <input type="text" class="form-control" id="firstnameFormControlInput1" name="firstname">
                         </div>
                         <div class="col-md-6"><!--lastname-->
                             <label for="lastnameFormControlInput1" class="form-label">Last Name</label>
-                            <input type="lastname" class="form-control" id="lastnameFormControlInput1">
+                            <input type="text" class="form-control" id="lastnameFormControlInput1" name="lastname">
                         </div>
                     </div>
                     <div class="row mt-4"><!--username-->
@@ -35,32 +35,32 @@
                             <label for="usernameFormControlInput1" class="form-label">User Name</label>
                             <div class="input-group flex-nowrap">
                                 <span class="input-group-text" id="addon-wrapping">@</span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" name="username">
                             </div>
                         </div>
                     </div>
                     <div class="row mt-4"><!--email-->
                         <div class="col-md-12">
                             <label for="emailFormControlInput1" class="form-label">Email <small class="text-muted"> (Optional)</small></label>
-                            <input type="email" class="form-control" id="emailFormControlInput1" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="emailFormControlInput1" placeholder="name@example.com" name="email">
                         </div>
                     </div>
                     <div class="row mt-4"><!--address-->
                         <div class="col-md-12">
                             <label for="addressFormControlInput1" class="form-label">Address</label>
-                            <input type="address" class="form-control" id="addressFormControlInput1" placeholder="1234 Main St">
+                            <input type="address" class="form-control" id="addressFormControlInput1" placeholder="1234 Main St" name="address">
                         </div>
                     </div>
                     <div class="row mt-4"><!--address2-->
                         <div class="col-md-12">
                             <label for="address2FormControlInput1" class="form-label">Address 2<small class="text-muted"> (Optional)</small></label>
-                            <input type="address2" class="form-control" id="address2FormControlInput1" placeholder="Apartment/Suite">
+                            <input type="address2" class="form-control" id="address2FormControlInput1" placeholder="Apartment/Suite" name="address2">
                         </div>
                     </div>
                     <div class="row mt-4">
                         <div class="col-md-5"><!--country drop-down-->
                             <label for="countryFormControlInput1" class="form-label">Country</label>
-                            <select class="form-select">
+                            <select class="form-select" name="country">
                                 <option selected>Choose..</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="col-md-5"><!--state drop-down-->
                             <label for="stateFormControlInput1" class="form-label">State</label>
-                            <select class="form-select">
+                            <select class="form-select" name="state">
                                 <option selected>Choose..</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -77,8 +77,8 @@
                             </select>
                         </div>
                         <div class="col-md-2 mb-2"><!--zip-->
-                            <label for="zipFormControlTextarea1" class="form-label">Zip</label>
-                            <input type="firstname" class="form-control" id="firstnameFormControlInput1">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="zip" name="zip">
                         </div>
                     </div>
                     <hr style="width: 100%">
@@ -90,6 +90,8 @@
                         <input class="form-check-input" type="checkbox" value="" id="checkDefault">
                         <label class="form-check-label" for="checkDefault"> Save this information for next time </label>
                     </div>
+                    <hr style="width: 100%">
+                    <button class="w-100 btn btn-primary btn-lg mb-4" type="submit">Continue to checkout</button>
                 </form>
             </div>
             <div class="col-md-4">
@@ -135,13 +137,13 @@
                 <div class="container border my-5">
                     <form action="">
                         <div class="input-group mt-3 mb-3">
-                            <input type="text" class="form-control" placeholder="PromoCode">
+                            <input type="text" class="form-control" placeholder="PromoCode" name="promocode">
                             <button class="btn btn-secondary" type="submit" id="button-addon2">Redeem</button>
                         </div>
                     </form>    
                 </div>               
             </div>
     </div>
-    <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
   </body>
 </html>
