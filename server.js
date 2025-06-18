@@ -14,33 +14,6 @@ app.use(express.static(path.join(__dirname,"static")));
 //routes
 app.use('/',router)
 
-//DATA ROUTE
-app.get('/UserDetails',async (req,res)=>{
-  res.sendFile(path.join(__dirname,'static','display.html'));
-});
-
-// //Saving the Details
-// app.post('/submit-form', async (req, res) => {
-//   try {
-//     const userData = new User(req.body);
-//     await userData.save();
-//     res.send('Form submitted and saved!');
-//   } catch (err) {
-//     res.status(500).send('Failed to save data.');
-//   }
-// });
-
-// //displaying the details
-// app.get('/UserDetails', async (req, res) => {
-//     try {
-//         const users = await User.find();
-//         res.json(users); // or you can render an HTML page using templating
-//     } catch (err) {
-//         res.status(500).send('Failed to retrieve data.');
-//     }
-// });
-
-
 //connecting the program to mongodb
 mongoose
   .connect(
