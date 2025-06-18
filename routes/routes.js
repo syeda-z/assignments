@@ -13,10 +13,10 @@ router.get('/form',(req,res)=>{ //app.get('/album/pricing/form',(req,res)=>{
 });
 
 //routes
-router.post("/submit-form",saveUser);
-router.get("/api/users",getAllUsers);
-router.get("/:id",getOneUsers);
-router.put("/:id",updateUser);
-router.delete("/:id",deleteUser);
+router.post("/submit-form",saveUser);//saving user details
+router.get("/api/users",getAllUsers);//displaying all users details
+router.get("/:id",getOneUsers);//displaying one user details
+router.put("/:id",updateUser);//update user details
+router.delete("/:id",deleteUser);//delete user
 
 module.exports = router;
