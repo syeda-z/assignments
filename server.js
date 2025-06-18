@@ -17,7 +17,7 @@ app.use('/',router)
 //connecting the program to mongodb
 mongoose
   .connect(
-    "mongodb+srv://zainab17703:Nq4InbLBK3MVhEFF@assignment.kufgics.mongodb.net/?retryWrites=true&w=majority&appName=assignment"
+    "mongodb+srv://zainab17703:<password>@assignment.kufgics.mongodb.net/?retryWrites=true&w=majority&appName=assignment"
   )
   .then(() => {
     console.log("connected to DB"); //executes when connected
